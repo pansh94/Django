@@ -10,16 +10,19 @@ Define your app in settings.py to let django know that you created a model in **
 ### Fields
 Each field is specified as a class attribute, and each attribute maps to a database column. Be careful not to choose field names that conflict with the models API like **clean, save, or delete**.
 Each field in your model should be an instance of the appropriate Field class. Django uses the field class types to determine a few things:
-1. The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT).
-2. The default HTML widget to use when rendering a form field (e.g. <input type="text">, <select>).
-3. The minimal validation requirements, used in Django’s admin and in automatically-generated forms.
+
+    1. The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT).
+    2. The default HTML widget to use when rendering a form field.
+    3. The minimal validation requirements, used in Django’s admin and in automatically-generated forms.
+    
 You can write your custom fields too. 
 
 #### Field options
 Each field takes a certain set of field-specific arguments(**max_length**) and There’s also a set of common arguments available to all field types. 
-1. null : if True( Allow empty value as NULL), by default False.
-2. blank : if True, field allow to be blank, by default False.
-3. choices
+
+    1. null : if True( Allow empty value as NULL), by default False.
+    2. blank : if True, field allow to be blank, by default False.
+    3. choices
 ```
 from django.db import models
 
