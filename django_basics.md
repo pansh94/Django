@@ -79,3 +79,18 @@ you can create class in admin.py and associate that with the desired decorator. 
 ```
 python manage.py shell
 ```
+
+## URL Handler
+URLpattern uses RE to redirect request to views. Provide mapping and accept HttpRequest and generate HttpResponse or Http404.
+
+## Django Template
+You can also use a base template as a inheritance which define what will be the basic content for each page. You can use 
+{% extends "base.html" %} to inherit that(this should be the first line).
+Syntax
+1. {{ variable }} : To display a variabel content
+2. {% tag %} : to display template tag
+3. {{ variable|filter }} : filter tale a string as input and generate an output string.
+4. {% url 'name' %} : this tag accept url name and redirect your request accordingly.  
+    {% url 'name' var.id %}(if you wanna send some value)
+    
+    
